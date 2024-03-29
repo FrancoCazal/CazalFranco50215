@@ -110,4 +110,3 @@ Templates utilizados:
 ## - templates
 
 ### Cada función posee un template correspondiente y se encuentran nombrados según su función, empezando siempre por la función y seguida de la clase o acción; Ejemplo: listaSaladas o deleteBebida. El template 'pagina.html' se utiliza para ser base de herencia en los distintos apartados de la aplicación.
-![image](https://github.com/FrancoCazal/CazalFranco50215/assets/141985578/0f2aafd6-d9e7-411d-b891-a7e50273c261)
