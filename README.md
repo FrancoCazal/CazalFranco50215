@@ -19,7 +19,7 @@
 - Python 3.11.4
 - Django 5.0.2
 
-### Obs: es necsario instalar Pillow (python -m pip install Pillow)
+### Obs: es necesario instalar Pillow (python -m pip install Pillow)
 
 ## Pruebas Realizadas
 
