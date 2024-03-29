@@ -1,0 +1,43 @@
+{% extends 'aplicacion/pagina.html' %}
+
+{% block titulo %}
+<div class="container-xxl py-5 bg-dark hero-header mb-5">
+    <div class="container my-3 py-3">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-7 text-center text-lg-start">
+                <h1 class="display-3 text-white animated slideInLeft">{{articulo.titulo}}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+<div class="container">
+    {% if articulo.imagen %}
+        <p><img src="{{articulo.imagen.url}}" width="500px" height="500px"></p>
+    {% endif %}
+    <p>Subtítulo: {{articulo.subtitulo}}</p>
+    <p>Contenido: {{articulo.contenido}}</p>
+    <p>Autor: {{articulo.usuario}}</p>
+    <p>Fecha de Publicación: {{articulo.fechaPublicacion}}</p>
+
+    {% if user.id == articulo.usuario.id %}
+        <a
+            href="{% url 'updateArticulo' articulo.id %}"
+            class="btn btn-primary"
+            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+            ><i class="fa fa-edit fa-sm" title="Edit Record"></i>
+        </a>
+        <a
+            href="{% url 'deleteArticulo' articulo.id %}"
+            class="btn btn-danger"
+            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+            ><i class="fa fa-trash fa-sm" title="Delete Record"></i>
+        </a>
+    {% endif %}
+</div>
+
+{% endblock contenido %}

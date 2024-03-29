@@ -1,0 +1,28 @@
+{% extends "aplicacion/pagina.html" %}
+
+{% block titulo %}
+<div class="container-xxl py-5 bg-dark hero-header mb-5">
+    <div class="container my-3 py-3">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-7 text-center text-lg-start">
+                <h1 class="display-3 text-white animated slideInLeft">Añadir Receta de Bebida</h1>
+                <p class="text-white animated slideInLeft mb-4 pb-2">Complete el formulario para añadir su receta.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock titulo %}
+
+{% block contenido %}
+
+<form action="" method="post" enctype="multipart/form-data">
+    <!-- Token para que la página no sea hackeada -->
+    {% csrf_token %}
+    <table>
+        <!-- Renderiza el formulario que se le manda -->
+        {{form.as_table}}
+    </table>
+    <input type="submit" value = "Guardar">
+</form>
+
+{% endblock contenido %}

@@ -1,0 +1,88 @@
+{% extends "aplicacion/pagina.html" %}
+
+
+{% block titulo %}
+<div class="container-xxl py-5 bg-dark hero-header mb-5">
+  <div class="container my-3 py-3">
+      <div class="row align-items-center g-4">
+          <div class="col-lg-7 text-center text-lg-start">
+              <h1 class="display-3 text-white animated slideInLeft">Acerca de Mi</h1>
+          </div>
+      </div>
+  </div>
+</div>
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+{% load static %}
+
+<div class='container' >
+					
+    <div class='section-header text-center' >
+        
+        <h2>Datos acerca de mí</h2>
+        
+        <div class='divider-draft center' ></div>
+        
+    </div>
+    
+    <div class='row' >
+        
+        <div class='col-md-4' >
+            <div class='about-person-img' >
+                
+                <img class="img-fluid rounded w-100 wow zoomIn" src="{% static 'img/hard.jpeg' %}">
+                
+            </div>
+        
+        </div>
+        
+        <div class='col-md-8 about-info' >
+            
+            <div class='clearfix' ></div>
+            
+            <ul class='info-list' >
+                
+                <li>
+                    <div class='inner' >
+                        <h4>Nombre</h4>
+                        <p>Franco Cazal</p>
+                    </div>
+                </li>
+                <li>
+                    <div class='inner' >
+                        <h4>Edad</h4>
+                        <p>21 Años</p>
+                    </div>
+                </li>
+                <li>
+                    <div class='inner' >
+                        <h4>Nacionalidad</h4>
+                        <p>Paraguayo</p>
+                    </div>
+                </li>
+                
+            </ul>
+            <br>
+            <br>
+            <div class='section-header text-center' >
+        
+                <h2>Información básica acerca de mí</h2>
+                
+                <div class='divider-draft center' ></div>
+        
+                <p>
+                    Soy estudiante de Ingeniería Industrial en la Universidad Nacional de Asunción, paralelamente a mis estudios universitarios busco aprender y capacitarme en programación, más específicamente en el área de la ciencia de datos, espero poder conseguir trabajo en el rubro de manera remota en un futuro no muy lejano. Espero que este proyecto satisfaga los criterios establecidos, desde ya, ¡muchas gracias por todo!.
+                </p>
+                
+            </div>
+            
+        </div>
+    
+    </div>
+    
+</div>
+
+{% endblock contenido %}

@@ -1,0 +1,62 @@
+{% extends 'aplicacion/pagina.html' %}
+
+{% block titulo %}
+<div class="container-xxl py-5 bg-dark hero-header mb-5">
+    <div class="container my-3 py-3">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-7 text-center text-lg-start">
+                <h1 class="display-3 text-white animated slideInLeft">Recetas Saladas</h1>
+                <p class="text-white animated slideInLeft mb-4 pb-2">Aquí puedes encontrar las mejores recetas saladas, deliciosas y faciles de hacer!</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock titulo %}
+    
+{% block contenido %}
+
+<table>
+    <tr>
+        <!-- Botón para añadir receta salada -->
+        <td width="350"><h2>Añadir Receta Salada</h2></td>
+        <td>
+            <a href="{% url 'createSalada' %}"
+            class="btn btn-primary btn-sm"
+            ><i class="fa fa-plus fa-lg" title="Crear"> </i>
+            </a>
+        </td>
+    </tr>
+</table>
+<br>
+<div class="menu-box">
+    <div class="container">
+        <div class="row">
+
+            {% for s in salada_list %}
+
+                <div class="col-4 px-5">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 special-grid drinks">
+                                    <div class="gallery-single fix">
+                                        <a href="{% url 'detalleSalada' s.id %}" title="Ir a la receta">
+                                            <img src="{{s.imagenRecetaSalada.url}}" width="300px" height="200px"/>
+                                        </a>
+                                        <div class="why-text">
+                                            <h4>{{s.titulo}}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+{% endblock contenido %}

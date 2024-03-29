@@ -1,0 +1,45 @@
+{% extends 'aplicacion/pagina.html' %}
+
+
+{% block titulo %}
+<div class="container-xxl py-5 bg-dark hero-header mb-5">
+    <div class="container my-3 py-3">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-7 text-center text-lg-start">
+                <h1 class="display-3 text-white animated slideInLeft">Acerca del Sitio</h1>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock titulo %}
+
+{% block contenido %}
+
+<div class="container-xxl py-1">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-0">
+                <h5 class="section-title ff-secondary text-start text-primary fw-normal">Acerca del Sitio</h5>
+                <h1 class="mb-4">Bienvenido al Blog <i class="fa fa-utensils text-primary me-2"></i></h1>
+                <p class="mb-4">Bienvenido a nuestro blog culinario, un espacio dedicado a compartir conocimientos y experiencias en el mundo de la gastronomía. Nuestro blog está estructurado en diferentes apartados para abordar una variedad de temas relacionados con la cocina:</p>
+                <p class="mb-4">1-Recetas Saladas: Aquí, te ofrecemos una amplia gama de platos salados, incluyendo aperitivos, entradas y platos principales. Las recetas están diseñadas para satisfacer diversos gustos y dietas, y se presentan con detalles sobre técnicas de cocción y combinaciones de sabores.</p>
+                <p class="mb-4">2-Recetas Saladas: En esta sección, encontrarás una colección de recetas detalladas para postres y dulces. Desde pasteles y galletas hasta helados y chocolates, cada receta incluye ingredientes precisos, instrucciones de preparación paso a paso y consejos útiles para lograr resultados óptimos.</p>
+                <p class="mb-4">3-Recetas de Bebidas: Descubre una variedad de bebidas refrescantes y reconfortantes en esta sección. Desde cócteles y batidos hasta infusiones y jugos, nuestras recetas de bebidas están diseñadas para proporcionar opciones para todas las ocasiones y preferencias.</p>
+                <p class="mb-4">4-Artículos de la Comunidad (Blog): En este apartado, invitamos a los miembros de nuestra comunidad a contribuir con artículos relacionados con la gastronomía. Los temas pueden variar desde consejos prácticos y reseñas de productos.</p>
+                <p class="mb-4">¡Explora nuestro blog y únete a nuestra comunidad de apasionados por la cocina! Esperamos que encuentres inspiración y disfrutes del contenido que hemos preparado para ti.</p>
+                <a class="btn btn-primary py-3 px-5 mt-2" href="{% url 'listaRecetas' %}">Explorar Recetas</a>
+                <a class="btn btn-primary py-3 px-5 mt-2" href="{% url 'listaArticulos' %}">Explorar Artículos</a>
+                <br>
+                <br>
+                <h1 class="mb-4">Información General Sobre el Sitio <i class="fa fa-utensils text-primary me-2"></i></h1>
+                <p class="mb-4">Además de lo mencionado anteriormente, el sitio posee un sistema de Registro, Login, Logout, Edicion de Perfil, Cambio de Clave y Agregar Avatar.</p>
+                <p class="mb-4">La manipulación de datos en la base de datos se realiza por medio del sistema CRUD, el código del programa posee métodos tanto CBV como views por medio de funciones, el framework utilizado es Django.</p>
+                <p class="mb-4">Dentro de las listas de los datos es posible buscar alguno en específico con la función de búsqueda.</p>
+                <p class="mb-4">También se tiene el apartado "acerca de mi", en el cual el alumno se introduce brevemente.</p>
+            </div>
+        </div>
+    </div>
+</div>
+    
+{% endblock contenido %}
