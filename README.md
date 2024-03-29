@@ -19,6 +19,8 @@
 - Python 3.11.4
 - Django 5.0.2
 
+### Obs: es necsario instalar Pillow (python -m pip install Pillow)
+
 ## Pruebas Realizadas
 
 - La información pertinente a las pruebas se encuentra en el archivo "Casos de Prueba - Proyecto de Python CoderHouse.xlsx" el cual se encuentra en el presente repositorio.
